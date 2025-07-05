@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Blog | Share Your Stories</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">MyStory<span>Blog</span></a>
+            <div class="nav-links">
+                <a href="#" class="active">Home</a>
+                <a href="#stories">Stories</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <button class="btn" id="newPostBtn">New Post</button>
+            </div>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <h1>Share Your Journey</h1>
+            <p>A space for your stories, experiences, and passions</p>
+            <div class="search-container">
+                <input type="text" placeholder="Search stories...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Categories -->
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title">Explore Topics</h2>
+            <div class="category-grid">
+                <div class="category-card" data-category="travel">
+                    <i class="fas fa-plane"></i>
+                    <h3>Travel</h3>
+                </div>
+                <div class="category-card" data-category="food">
+                    <i class="fas fa-utensils"></i>
+                    <h3>Food</h3>
+                </div>
+                <div class="category-card" data-category="tech">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>Tech</h3>
+                </div>
+                <div class="category-card" data-category="lifestyle">
+                    <i class="fas fa-heart"></i>
+                    <h3>Lifestyle</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Stories Section -->
+    <section class="stories" id="stories">
+        <div class="container">
+            <h2 class="section-title">Latest Stories</h2>
+            <div class="stories-grid" id="storiesContainer">
+                <!-- Stories will be loaded here dynamically -->
+            </div>
+            <button class="btn load-more" id="loadMoreBtn">Load More Stories</button>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-text">
+                    <p>Welcome to my personal blog! I created this space to share my thoughts, experiences, and passions with the world.</p>
+                    <p>Here you'll find stories from my travels, thoughts on technology, culinary adventures, and reflections on life.</p>
+                    <p>Feel free to explore and connect with me through my stories!</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="About me">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <input type="text" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+    
+    <!-- New Post Modal -->
+    <div class="modal" id="postModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Create New Post</h2>
+            <form id="postForm">
+                <div class="form-group">
+                    <input type="text" id="postTitle" placeholder="Post Title" required>
+                </div>
+                <div class="form-group">
+                    <select id="postCategory" required>
+                        <option value="">Select Category</option>
+                        <option value="travel">Travel</option>
+                        <option value="food">Food</option>
+                        <option value="tech">Tech</option>
+                        <option value="lifestyle">Lifestyle</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <textarea id="postContent" placeholder="Your story..." rows="10" required></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="postImage" placeholder="Image URL (optional)">
+                </div>
+                <button type="submit" class="btn">Publish Post</button>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>MyStoryBlog</h3>
+                    <p>A personal space to share stories and connect with readers.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#stories">Stories</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 MyStoryBlog. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
